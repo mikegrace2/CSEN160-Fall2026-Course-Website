@@ -1,127 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CSEN 160 - Course Website</title>
+    <title>CSEN 160 | Fall 2026</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px;
-            line-height: 1.6;
-        }
+    <!-- Figtree is an SCU-approved alternative to Avenir Next -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        header {
-            border-bottom: 2px solid #ccc;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            margin-bottom: 5px;
-        }
-
-        .lecture {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-        }
-
-        .lecture h2 {
-            margin-top: 0;
-        }
-
-        a.button {
-            display: inline-block;
-            padding: 8px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            border: 1px solid #333;
-        }
-
-        a.button:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>CSEN 160: Object-Oriented Analysis, Design, and Programming</h1>
-    <p>Santa Clara University</p>
-    <p>Instructor: Michael G. Schimpf</p>
-</header>
+    <!-- TOP BAR -->
+    <header class="top-header">
+        <div class="container header-content">
+            <div>
+                <div class="scu-name">SANTA CLARA UNIVERSITY</div>
+                <div class="school-name">School of Engineering</div>
+            </div>
 
-<h2>Course Materials</h2>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#course">Course</a>
+                <a href="lectures.html">Lectures</a>
+                <a href="#resources">Resources</a>
+            </nav>
+        </div>
+    </header>
 
-<div class="lecture">
-    <h2>Lecture 1: Java Refresher</h2>
-    <a class="button"
-       href="https://github.com/mikegrace2/CSEN160_01_Lecture_JavaRefresher">
-       Open Repository
-    </a>
-</div>
 
-<div class="lecture">
-    <h2>Lecture 2: Object-Oriented Programming</h2>
-    <a class="button"
-       href="https://github.com/mikegrace2/CSEN160_02_Lecture_OOP">
-       Open Repository
-    </a>
-</div>
+    <!-- HERO -->
+    <main id="home">
 
-<div class="lecture">
-    <h2>Lecture 3: AWT, Swing, and Graphics</h2>
-    <a class="button"
-       href="https://github.com/mikegrace2/CSEN160_03_Lecture_AWTSwingGraphics">
-       Open Repository
-    </a>
-</div>
+        <section class="hero">
+            <div class="container hero-content">
 
-<div class="lecture">
-    <h2>Lecture 4: Java Details and Exceptions</h2>
-    <a class="button"
-       href="https://github.com/mikegrace2/CSEN160_04_Lecture_JavaInMoreDetailsPlusExceptions">
-       Open Repository
-    </a>
-</div>
+                <div class="course-badge">FALL 2026</div>
 
-<div class="lecture">
-    <h2>Lecture 5: Data Structures and Generics</h2>
-    <a class="button"
-       href="https://github.com/mikegrace2/CSEN160_05_Lecture_DataStructuresAndGenerics">
-       Open Repository
-    </a>
-</div>
+                <h1>
+                    CSEN 160
+                    <span>Object-Oriented Analysis, Design, and Programming</span>
+                </h1>
 
-<div class="lecture">
-    <h2>Lecture 6: File I/O and Serialization</h2>
-    <a class="button"
-       href="https://github.com/mikegrace2/CSEN160_06_Lecture_FileIO_AdvancedFileIO_Serialize">
-       Open Repository
-    </a>
-</div>
+                <p class="hero-text">
+                    Learn the principles of object-oriented programming,
+                    software design, Java development, testing, and modern
+                    software engineering practices.
+                </p>
 
-<div class="lecture">
-    <h2>Lecture 7: Threads</h2>
-    <a class="button"
-       href="https://github.com/mikegrace2/CSEN160_07_Threads">
-       Open Repository
-    </a>
-</div>
+                <div class="hero-buttons">
+                    <a href="lectures.html" class="button button-yellow">
+                        View Lectures
+                    </a>
 
-<div class="lecture">
-    <h2>Lecture 8: Miscellaneous</h2>
-    <a class="button"
-       href="https://github.com/mikegrace2/CSEN160_08_Miscellaneous">
-       Open Repository
-    </a>
-</div>
+                    <a href="#course" class="button button-outline">
+                        Course Information
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- QUICK LINKS -->
+        <section class="quick-links">
+            <div class="container">
+
+                <div class="quick-grid">
+
+                    <a href="lectures.html" class="quick-card">
+                        <div class="card-icon">📚</div>
+                        <h2>Lectures</h2>
+                        <p>PowerPoints, lecture materials, and examples.</p>
+                    </a>
+
+                    <a href="#resources" class="quick-card">
+                        <div class="card-icon">💻</div>
+                        <h2>Resources</h2>
+                        <p>Development tools and useful course resources.</p>
+                    </a>
+
+                    <a href="#course" class="quick-card">
+                        <div class="card-icon">📋</div>
+                        <h2>Course Information</h2>
+                        <p>Schedule, instructor information, and policies.</p>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- COURSE INFO -->
+        <section id="course" class="content-section">
+            <div class="container">
+
+                <div class="section-title">
+                    <span>CSEN 160</span>
+                    <h2>Course Information</h2>
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <h3>Instructor</h3>
+                        <p>Michael G. Schimpf</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Quarter</h3>
+                        <p>Fall 2026</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Course Materials</h3>
+                        <p>Available through the course lecture page.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- LECTURES PREVIEW -->
+        <section class="lectures-preview">
+
+            <div class="container">
+
+                <div class="section-title light-title">
+                    <span>COURSE MATERIALS</span>
+                    <h2>Lecture Repository</h2>
+                </div>
+
+                <p class="section-description">
+                    Access all course lectures, PowerPoint presentations,
+                    source code, examples, and supporting materials.
+                </p>
+
+                <a href="lectures.html" class="button button-yellow">
+                    Browse All Lectures →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESOURCES -->
+        <section id="resources" class="content-section">
+            <div class="container">
+
+                <div class="section-title">
+                    <span>TOOLS</span>
+                    <h2>Course Resources</h2>
+                </div>
+
+                <div class="resources-grid">
+
+                    <div class="resource-card">
+                        <h3>☕ Java</h3>
+                        <p>Java development environment and programming resources.</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>🧠 IntelliJ IDEA</h3>
+                        <p>Recommended integrated development environment.</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>🐙 GitHub</h3>
+                        <p>Course repositories, assignments, and source code.</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>🧪 JUnit</h3>
+                        <p>Unit testing and software quality resources.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+
+            <strong>CSEN 160</strong>
+
+            <p>
+                Object-Oriented Analysis, Design, and Programming
+            </p>
+
+            <p class="footer-small">
+                Santa Clara University · Fall 2026
+            </p>
+
+        </div>
+    </footer>
 
 </body>
 </html>
