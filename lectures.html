@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSEN 160 | Lectures</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .lectures-header {
+            background: var(--scu-red);
+            color: white;
+            padding: 70px 0;
+        }
+
+        .lectures-header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        .lectures-container {
+            padding: 70px 0;
+        }
+
+        .lecture-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .lecture-card {
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            align-items: center;
+            gap: 25px;
+
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: 0.2s;
+        }
+
+        .lecture-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .lecture-number {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--scu-red);
+            color: white;
+
+            font-size: 1.3rem;
+            font-weight: 800;
+            border-radius: 50%;
+        }
+
+        .lecture-info h2 {
+            margin: 0;
+            color: var(--scu-slate);
+        }
+
+        .lecture-info p {
+            margin: 5px 0 0;
+            color: var(--scu-gray);
+        }
+
+        .ppt-button {
+            background: var(--scu-red);
+            color: white;
+
+            text-decoration: none;
+            font-weight: 700;
+
+            padding: 12px 18px;
+            border-radius: 5px;
+        }
+
+        .ppt-button:hover {
+            background: var(--scu-dark-red);
+        }
+
+        @media (max-width: 700px) {
+
+            .lecture-card {
+                grid-template-columns: 1fr;
+            }
+
+            .lectures-header h1 {
+                font-size: 2.5rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="top-header">
+
+        <div class="container header-content">
+
+            <div>
+                <div class="scu-name">SANTA CLARA UNIVERSITY</div>
+                <div class="school-name">CSEN 160 · Fall 2026</div>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="lectures.html">Lectures</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <section class="lectures-header">
+
+        <div class="container">
+
+            <div class="course-badge">CSEN 160</div>
+
+            <h1>Lecture Materials</h1>
+
+            <p>
+                PowerPoint presentations, lecture materials,
+                and course resources for Fall 2026.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <main class="lectures-container">
+
+        <div class="container">
+
+            <div class="lecture-list">
+
+
+                <!-- LECTURE 1 -->
+                <article class="lecture-card">
+
+                    <div class="lecture-number">01</div>
+
+                    <div class="lecture-info">
+                        <h2>Java Refresher</h2>
+                        <p>
+                            Review of Java fundamentals and preparation
+                            for CSEN 160.
+                        </p>
+                    </div>
+
+                    <a class="ppt-button"
+                       href="lectures/Lecture_01_Java_Refresher.pptx">
+                        Download PowerPoint
+                    </a>
+
+                </article>
+
+
+                <!-- LECTURE 2 -->
+                <article class="lecture-card">
+
+                    <div class="lecture-number">02</div>
+
+                    <div class="lecture-info">
+                        <h2>Object-Oriented Programming</h2>
+                        <p>
+                            Classes, objects, inheritance,
+                            polymorphism, and abstraction.
+                        </p>
+                    </div>
+
+                    <a class="ppt-button"
+                       href="lectures/Lecture_02_OOP.pptx">
+                        Download PowerPoint
+                    </a>
+
+                </article>
+
+
+                <!-- LECTURE 3 -->
+                <article class="lecture-card">
+
+                    <div class="lecture-number">03</div>
+
+                    <div class="lecture-info">
+                        <h2>AWT, Swing, and Graphics</h2>
+                        <p>
+                            Graphical user interfaces and Java graphics.
+                        </p>
+                    </div>
+
+                    <a class="ppt-button"
+                       href="lectures/Lecture_03_AWT_Swing_Graphics.pptx">
+                        Download PowerPoint
+                    </a>
+
+                </article>
+
+
+                <!-- LECTURE 4 -->
+                <article class="lecture-card">
+
+                    <div class="lecture-number">04</div>
+
+                    <div class="lecture-info">
+                        <h2>Java Details and Exceptions</h2>
+                        <p>
+                            Advanced Java concepts and exception handling.
+                        </p>
+                    </div>
+
+                    <a class="ppt-button"
+                       href="lectures/Lecture_04_Exceptions.pptx">
+                        Download PowerPoint
+                    </a>
+
+                </article>
+
+
+                <!-- LECTURE 5 -->
+                <article class="lecture-card">
+
+                    <div class="lecture-number">05</div>
+
+                    <div class="lecture-info">
+                        <h2>Data Structures and Generics</h2>
+                        <p>
+                            Collections, generics, and data structures.
+                        </p>
+                    </div>
+
+                    <a class="ppt-button"
+                       href="lectures/Lecture_05_Data_Structures_Generics.pptx">
+                        Download PowerPoint
+                    </a>
+
+                </article>
+
+
+                <!-- LECTURE 6 -->
+                <article class="lecture-card">
+
+                    <div class="lecture-number">06</div>
+
+                    <div class="lecture-info">
+                        <h2>File I/O and Serialization</h2>
+                        <p>
+                            Working with files, streams, and object serialization.
+                        </p>
+                    </div>
+
+                    <a class="ppt-button"
+                       href="lectures/Lecture_06_File_IO.pptx">
+                        Download PowerPoint
+                    </a>
+
+                </article>
+
+
+                <!-- LECTURE 7 -->
+                <article class="lecture-card">
+
+                    <div class="lecture-number">07</div>
+
+                    <div class="lecture-info">
+                        <h2>Threads and Concurrency</h2>
+                        <p>
+                            Multithreading, synchronization, and concurrent programming.
+                        </p>
+                    </div>
+
+                    <a class="ppt-button"
+                       href="lectures/Lecture_07_Threads.pptx">
+                        Download PowerPoint
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container">
+
+            <strong>CSEN 160 · Fall 2026</strong>
+
+            <p>Santa Clara University</p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+:root {
+    --scu-red: #a6192e;
+    --scu-dark-red: #7f1023;
+    --scu-yellow: #f2b134;
+    --scu-slate: #253746;
+    --scu-light: #f7f5f2;
+    --scu-white: #ffffff;
+    --scu-gray: #687078;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Figtree", Arial, sans-serif;
+    background: var(--scu-light);
+    color: var(--scu-slate);
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.top-header {
+    background: var(--scu-white);
+    border-top: 7px solid var(--scu-red);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.header-content {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scu-name {
+    color: var(--scu-red);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.school-name {
+    color: var(--scu-gray);
+    font-size: 0.9rem;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--scu-slate);
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--scu-red);
+}
+
+
+/* HERO */
+
+.hero {
+    background:
+        linear-gradient(
+            120deg,
+            var(--scu-red),
+            var(--scu-dark-red)
+        );
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.course-badge {
+    display: inline-block;
+    background: var(--scu-yellow);
+    color: var(--scu-slate);
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    display: block;
+    font-size: clamp(1.3rem, 3vw, 2.2rem);
+    margin-top: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    max-width: 700px;
+    opacity: 0.92;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-yellow {
+    background: var(--scu-yellow);
+    color: var(--scu-slate);
+}
+
+.button-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+
+/* QUICK LINKS */
+
+.quick-links {
+    margin-top: -40px;
+    position: relative;
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.quick-card {
+    display: block;
+    text-decoration: none;
+    background: white;
+    color: var(--scu-slate);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.2s;
+}
+
+.quick-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+}
+
+.quick-card h2 {
+    color: var(--scu-red);
+}
+
+
+/* SECTIONS */
+
+.content-section {
+    padding: 90px 0;
+}
+
+.section-title span {
+    color: var(--scu-red);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin: 5px 0 40px;
+}
+
+
+/* INFO CARDS */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-left: 6px solid var(--scu-red);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.info-card h3 {
+    margin-top: 0;
+    color: var(--scu-red);
+}
+
+
+/* LECTURE PREVIEW */
+
+.lectures-preview {
+    text-align: center;
+    background: var(--scu-slate);
+    color: white;
+    padding: 90px 0;
+}
+
+.light-title span {
+    color: var(--scu-yellow);
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+
+/* RESOURCES */
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.resource-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 5px solid var(--scu-yellow);
+}
+
+.resource-card h3 {
+    color: var(--scu-red);
+}
+
+
+/* FOOTER */
+
+footer {
+    background: var(--scu-red);
+    color: white;
+    text-align: center;
+    padding: 45px 0;
+}
+
+.footer-small {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .header-content {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .quick-grid,
+    .info-grid,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+}
