@@ -5,54 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CSEN 160 | Lectures</title>
+    <title>CSEN 160 | Lecture Materials</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
     <style>
 
+        /* PAGE HEADER */
+
         .lectures-header {
-            background: var(--scu-red);
+            background: linear-gradient(135deg, #a6192e, #7f1023);
             color: white;
             padding: 70px 0;
         }
 
         .lectures-header h1 {
             font-size: 3.5rem;
-            margin: 0;
+            margin: 15px 0 10px 0;
         }
+
+        .lectures-header p {
+            font-size: 1.15rem;
+            max-width: 700px;
+        }
+
+
+        /* MAIN CONTENT */
 
         .lectures-container {
-            padding: 70px 0;
+            padding: 60px 0 90px 0;
         }
 
-        .lecture-list {
-            display: grid;
-            gap: 20px;
+
+        /* WEEK SECTION */
+
+        .week-section {
+            margin-bottom: 55px;
         }
 
-        .lecture-card {
-            display: grid;
-            grid-template-columns: 80px 1fr auto;
+        .week-header {
+            display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 20px;
 
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            transition: 0.2s;
+            border-bottom: 3px solid #a6192e;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
         }
 
-        .lecture-card:hover {
-            transform: translateY(-3px);
-        }
+        .week-number {
+            background: #a6192e;
+            color: white;
 
-        .lecture-number {
             width: 60px;
             height: 60px;
 
@@ -60,47 +70,105 @@
             align-items: center;
             justify-content: center;
 
-            background: var(--scu-red);
-            color: white;
-
-            font-size: 1.3rem;
-            font-weight: 800;
             border-radius: 50%;
+
+            font-size: 1.2rem;
+            font-weight: 800;
         }
 
-        .lecture-info h2 {
+        .week-title h2 {
             margin: 0;
-            color: var(--scu-slate);
+            font-size: 1.8rem;
+            color: #253746;
         }
 
-        .lecture-info p {
-            margin: 5px 0 0;
-            color: var(--scu-gray);
+        .week-title p {
+            margin: 3px 0 0 0;
+            color: #687078;
+        }
+
+
+        /* POWERPOINT GRID */
+
+        .lecture-files {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .ppt-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+
+            background: white;
+            padding: 18px 20px;
+
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+            border-left: 5px solid #f2b134;
+
+            transition: 0.2s;
+        }
+
+        .ppt-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.12);
+        }
+
+        .ppt-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ppt-icon {
+            font-size: 1.8rem;
+        }
+
+        .ppt-name {
+            font-weight: 700;
+            color: #253746;
+            line-height: 1.3;
         }
 
         .ppt-button {
-            background: var(--scu-red);
+            background: #a6192e;
             color: white;
 
-            text-decoration: none;
-            font-weight: 700;
-
-            padding: 12px 18px;
+            padding: 9px 14px;
             border-radius: 5px;
+
+            text-decoration: none;
+            white-space: nowrap;
+
+            font-weight: 700;
+            font-size: 0.9rem;
         }
 
         .ppt-button:hover {
-            background: var(--scu-dark-red);
+            background: #7f1023;
         }
+
+
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
-            .lecture-card {
-                grid-template-columns: 1fr;
-            }
-
             .lectures-header h1 {
                 font-size: 2.5rem;
+            }
+
+            .ppt-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ppt-button {
+                width: 100%;
+                text-align: center;
             }
 
         }
@@ -109,7 +177,10 @@
 
 </head>
 
+
 <body>
+
+    <!-- NAVIGATION -->
 
     <header class="top-header">
 
@@ -117,7 +188,9 @@
 
             <div>
                 <div class="scu-name">SANTA CLARA UNIVERSITY</div>
-                <div class="school-name">CSEN 160 · Fall 2026</div>
+                <div class="school-name">
+                    CSEN 160 · Object-Oriented Analysis, Design, and Programming
+                </div>
             </div>
 
             <nav>
@@ -130,17 +203,19 @@
     </header>
 
 
+    <!-- PAGE TITLE -->
+
     <section class="lectures-header">
 
         <div class="container">
 
-            <div class="course-badge">CSEN 160</div>
+            <div class="course-badge">FALL 2026</div>
 
             <h1>Lecture Materials</h1>
 
             <p>
-                PowerPoint presentations, lecture materials,
-                and course resources for Fall 2026.
+                Download PowerPoint presentations and access lecture
+                materials organized by week.
             </p>
 
         </div>
@@ -148,161 +223,444 @@
     </section>
 
 
+    <!-- LECTURES -->
+
     <main class="lectures-container">
 
         <div class="container">
 
-            <div class="lecture-list">
 
+            <!-- ===================== -->
+            <!-- WEEK 1 -->
+            <!-- ===================== -->
 
-                <!-- LECTURE 1 -->
-                <article class="lecture-card">
+            <section class="week-section">
 
-                    <div class="lecture-number">01</div>
+                <div class="week-header">
 
-                    <div class="lecture-info">
-                        <h2>Java Refresher</h2>
-                        <p>
-                            Review of Java fundamentals and preparation
-                            for CSEN 160.
-                        </p>
+                    <div class="week-number">01</div>
+
+                    <div class="week-title">
+                        <h2>Week 1: Java Refresher</h2>
+                        <p>Course introduction, Java history, and Java fundamentals.</p>
                     </div>
 
-                    <a class="ppt-button"
-                       href="lectures/Lecture_01_Java_Refresher.pptx">
-                        Download PowerPoint
-                    </a>
-
-                </article>
+                </div>
 
 
-                <!-- LECTURE 2 -->
-                <article class="lecture-card">
+                <div class="lecture-files">
 
-                    <div class="lecture-number">02</div>
 
-                    <div class="lecture-info">
-                        <h2>Object-Oriented Programming</h2>
-                        <p>
-                            Classes, objects, inheritance,
-                            polymorphism, and abstraction.
-                        </p>
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Course Introduction
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week01_JavaRefresher/1_CourseIntro_12p_V4.0.pptx">
+                            Download
+                        </a>
+
                     </div>
 
-                    <a class="ppt-button"
-                       href="lectures/Lecture_02_OOP.pptx">
-                        Download PowerPoint
-                    </a>
 
-                </article>
+                    <div class="ppt-card">
 
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
 
-                <!-- LECTURE 3 -->
-                <article class="lecture-card">
+                            <div class="ppt-name">
+                                History of Hello World and Java
+                            </div>
+                        </div>
 
-                    <div class="lecture-number">03</div>
+                        <a class="ppt-button"
+                           href="lectures/Week01_JavaRefresher/2_HistoryHelloWorldCvsJava_40p_V4.0.pptx">
+                            Download
+                        </a>
 
-                    <div class="lecture-info">
-                        <h2>AWT, Swing, and Graphics</h2>
-                        <p>
-                            Graphical user interfaces and Java graphics.
-                        </p>
                     </div>
 
-                    <a class="ppt-button"
-                       href="lectures/Lecture_03_AWT_Swing_Graphics.pptx">
-                        Download PowerPoint
-                    </a>
 
-                </article>
+                    <div class="ppt-card">
 
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
 
-                <!-- LECTURE 4 -->
-                <article class="lecture-card">
+                            <div class="ppt-name">
+                                Java Refresher
+                            </div>
+                        </div>
 
-                    <div class="lecture-number">04</div>
+                        <a class="ppt-button"
+                           href="lectures/Week01_JavaRefresher/3_JavaRefresher_75p_V4.0.pptx">
+                            Download
+                        </a>
 
-                    <div class="lecture-info">
-                        <h2>Java Details and Exceptions</h2>
-                        <p>
-                            Advanced Java concepts and exception handling.
-                        </p>
                     </div>
 
-                    <a class="ppt-button"
-                       href="lectures/Lecture_04_Exceptions.pptx">
-                        Download PowerPoint
-                    </a>
+                </div>
 
-                </article>
+            </section>
 
 
-                <!-- LECTURE 5 -->
-                <article class="lecture-card">
+            <!-- ===================== -->
+            <!-- WEEK 2 -->
+            <!-- ===================== -->
 
-                    <div class="lecture-number">05</div>
+            <section class="week-section">
 
-                    <div class="lecture-info">
-                        <h2>Data Structures and Generics</h2>
-                        <p>
-                            Collections, generics, and data structures.
-                        </p>
+                <div class="week-header">
+
+                    <div class="week-number">02</div>
+
+                    <div class="week-title">
+                        <h2>Week 2: Object-Oriented Programming</h2>
+                        <p>Classes, objects, and object-oriented programming concepts.</p>
                     </div>
 
-                    <a class="ppt-button"
-                       href="lectures/Lecture_05_Data_Structures_Generics.pptx">
-                        Download PowerPoint
-                    </a>
-
-                </article>
+                </div>
 
 
-                <!-- LECTURE 6 -->
-                <article class="lecture-card">
+                <div class="lecture-files">
 
-                    <div class="lecture-number">06</div>
+                    <div class="ppt-card">
 
-                    <div class="lecture-info">
-                        <h2>File I/O and Serialization</h2>
-                        <p>
-                            Working with files, streams, and object serialization.
-                        </p>
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Object-Oriented Programming
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week02_ObjectOriented/1_ObjectOriented_p59_V4.0.pptx">
+                            Download
+                        </a>
+
                     </div>
 
-                    <a class="ppt-button"
-                       href="lectures/Lecture_06_File_IO.pptx">
-                        Download PowerPoint
-                    </a>
+                </div>
 
-                </article>
+            </section>
 
 
-                <!-- LECTURE 7 -->
-                <article class="lecture-card">
+            <!-- ===================== -->
+            <!-- WEEK 3 -->
+            <!-- ===================== -->
 
-                    <div class="lecture-number">07</div>
+            <section class="week-section">
 
-                    <div class="lecture-info">
-                        <h2>Threads and Concurrency</h2>
-                        <p>
-                            Multithreading, synchronization, and concurrent programming.
-                        </p>
+                <div class="week-header">
+
+                    <div class="week-number">03</div>
+
+                    <div class="week-title">
+                        <h2>Week 3: UML, AWT, Swing, and Graphics</h2>
+                        <p>Unified Modeling Language and graphical Java applications.</p>
                     </div>
 
-                    <a class="ppt-button"
-                       href="lectures/Lecture_07_Threads.pptx">
-                        Download PowerPoint
-                    </a>
-
-                </article>
+                </div>
 
 
-            </div>
+                <div class="lecture-files">
+
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                UML Introduction
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week03_UMLAWTSwingGraphics/1_UML_Intro_p79_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Swing, AWT, Events, and Graphics 2D
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week03_UMLAWTSwingGraphics/2_SwingAWTEventsGraphics2D_65_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ===================== -->
+            <!-- WEEK 4 -->
+            <!-- ===================== -->
+
+            <section class="week-section">
+
+                <div class="week-header">
+
+                    <div class="week-number">04</div>
+
+                    <div class="week-title">
+                        <h2>Week 4: Exceptions</h2>
+                        <p>Java exception handling and error management.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="lecture-files">
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Exceptions
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week04_Exceptions/1_Exceptions_46p_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ===================== -->
+            <!-- WEEK 5 -->
+            <!-- ===================== -->
+
+            <section class="week-section">
+
+                <div class="week-header">
+
+                    <div class="week-number">05</div>
+
+                    <div class="week-title">
+                        <h2>Week 5: Chaining, Final, Overloading, and Generics</h2>
+                        <p>Advanced object-oriented programming and Java collections.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="lecture-files">
+
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Constructor Chaining, Final Methods, Classes, and Overloading
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week05_ChainingFinalOverload_Generics/1_ConstructorChainingFinalMethodsClassesOverloading_33_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Generics
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week05_ChainingFinalOverload_Generics/2_Generics_30p_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Collections and Comparator
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week05_ChainingFinalOverload_Generics/3_CollectionsComparator_50p_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ===================== -->
+            <!-- WEEK 6 -->
+            <!-- ===================== -->
+
+            <section class="week-section">
+
+                <div class="week-header">
+
+                    <div class="week-number">06</div>
+
+                    <div class="week-title">
+                        <h2>Week 6: File I/O and Threads</h2>
+                        <p>File processing, serialization, and multithreaded programming.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="lecture-files">
+
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Basic File I/O, Advanced File I/O, and Serialization
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week06_File_Threads/1_BasicFileIO_AdvFileIOandSerialize_83p_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Threads
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week06_File_Threads/2_Threads_62p_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ===================== -->
+            <!-- WEEK 7 -->
+            <!-- ===================== -->
+
+            <section class="week-section">
+
+                <div class="week-header">
+
+                    <div class="week-number">07</div>
+
+                    <div class="week-title">
+                        <h2>Week 7: Advanced Java Topics</h2>
+                        <p>Executor services, annotations, reflection, lambdas, records, and JAR files.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="lecture-files">
+
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Threads and Executor Service
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week07_Miscellaneous/1_Threads_ExecutorService_71p_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+
+                    <div class="ppt-card">
+
+                        <div class="ppt-info">
+                            <div class="ppt-icon">📊</div>
+
+                            <div class="ppt-name">
+                                Annotations, Reflection, Lambda, Record, and JAR
+                            </div>
+                        </div>
+
+                        <a class="ppt-button"
+                           href="lectures/Week07_Miscellaneous/2_Annotations_Reflections_Lambda_Record_JAR_53p_V4.0.pptx">
+                            Download
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
 
         </div>
 
     </main>
 
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -310,11 +668,18 @@
 
             <strong>CSEN 160 · Fall 2026</strong>
 
-            <p>Santa Clara University</p>
+            <p>
+                Object-Oriented Analysis, Design, and Programming
+            </p>
+
+            <p class="footer-small">
+                Santa Clara University
+            </p>
 
         </div>
 
     </footer>
+
 
 </body>
 </html>
