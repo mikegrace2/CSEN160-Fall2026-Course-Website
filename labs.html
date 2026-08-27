@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN 160 | Labs and Code Examples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .labs-header {
+            background: linear-gradient(135deg, #a6192e, #7f1023);
+            color: white;
+            padding: 70px 0;
+        }
+
+        .labs-header h1 {
+            font-size: 3.5rem;
+            margin: 15px 0 10px;
+        }
+
+        .labs-header p {
+            font-size: 1.15rem;
+            max-width: 750px;
+        }
+
+        .labs-container {
+            padding: 60px 0 90px;
+        }
+
+        .week-section {
+            margin-bottom: 55px;
+        }
+
+        .week-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 3px solid #a6192e;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .week-number {
+            background: #a6192e;
+            color: white;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .week-title h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #253746;
+        }
+
+        .week-title p {
+            margin: 3px 0 0;
+            color: #687078;
+        }
+
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .repo-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid #f2b134;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .repo-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .repo-card h3 {
+            margin: 0 0 10px;
+            color: #253746;
+            font-size: 1.2rem;
+        }
+
+        .repo-card p {
+            color: #687078;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .repo-button {
+            display: inline-block;
+            background: #a6192e;
+            color: white;
+            padding: 11px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .repo-button:hover {
+            background: #7f1023;
+        }
+
+        .github-note {
+            background: #f5f5f5;
+            border-left: 5px solid #a6192e;
+            padding: 20px;
+            margin-bottom: 50px;
+            border-radius: 5px;
+        }
+
+        .github-note strong {
+            color: #a6192e;
+        }
+
+        @media (max-width: 700px) {
+            .labs-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .week-header {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top-header">
+        <div class="container header-content">
+            <div>
+                <div class="scu-name">SANTA CLARA UNIVERSITY</div>
+                <div class="school-name">CSEN 160 · Object-Oriented Analysis, Design, and Programming</div>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="lectures.html">Lectures</a>
+                <a href="labs.html">Labs & Code</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="labs-header">
+        <div class="container">
+            <div class="course-badge">FALL 2026</div>
+            <h1>Labs & Code Examples</h1>
+            <p>Access Java programming examples, lecture demonstrations, projects, and laboratory code organized by course week.</p>
+        </div>
+    </section>
+
+    <main class="labs-container">
+        <div class="container">
+
+            <div class="github-note">
+                <strong>GitHub Code Repositories</strong><br>
+                Each section below links directly to a public GitHub repository containing Java examples and code used in CSEN 160.
+            </div>
+
+            <!-- WEEK 1 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">01</div>
+                    <div class="week-title">
+                        <h2>Week 1: Java Refresher</h2>
+                        <p>Java fundamentals and refresher examples.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">☕</div>
+                        <h3>Java Refresher</h3>
+                        <p>Java refresher code and examples used for lecture demonstrations.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_01_Lecture_JavaRefresher" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEEK 2 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">02</div>
+                    <div class="week-title">
+                        <h2>Week 2: Object-Oriented Programming</h2>
+                        <p>Classes, objects, encapsulation, inheritance, and other OOP concepts.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">☕</div>
+                        <h3>Object-Oriented Programming</h3>
+                        <p>Java examples demonstrating fundamental object-oriented programming concepts.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_02_Lecture_OOP" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEEK 3 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">03</div>
+                    <div class="week-title">
+                        <h2>Week 3: AWT, Swing, and Graphics</h2>
+                        <p>Java graphical user interfaces, events, and graphics programming.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">☕</div>
+                        <h3>AWT, Swing, and Graphics</h3>
+                        <p>Java GUI examples using AWT, Swing, event handling, and graphics.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_03_Lecture_AWTSwingGraphics" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEEK 4 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">04</div>
+                    <div class="week-title">
+                        <h2>Week 4: Java Details and Exceptions</h2>
+                        <p>Advanced Java concepts and exception handling.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">☕</div>
+                        <h3>Java in More Detail and Exceptions</h3>
+                        <p>Examples covering advanced Java concepts and exception handling.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_04_Lecture_JavaInMoreDetailsPlusExceptions" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEEK 5 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">05</div>
+                    <div class="week-title">
+                        <h2>Week 5: Data Structures and Generics</h2>
+                        <p>Java collections, data structures, and generic programming.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">☕</div>
+                        <h3>Data Structures and Generics</h3>
+                        <p>Examples covering Java data structures, collections, and generics.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_05_Lecture_DataStructursAndGenerics" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEEK 6 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">06</div>
+                    <div class="week-title">
+                        <h2>Week 6: File I/O and Serialization</h2>
+                        <p>Basic and advanced file processing and object serialization.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">☕</div>
+                        <h3>File I/O, Advanced File I/O, and Serialization</h3>
+                        <p>Java examples for reading, writing, processing files, and serialization.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_06_Lecture_FileIO_AdvancedFileIO_Serialize" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEEK 7 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">07</div>
+                    <div class="week-title">
+                        <h2>Week 7: Threads</h2>
+                        <p>Multithreaded programming and concurrency examples.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">☕</div>
+                        <h3>Java Threads</h3>
+                        <p>Examples demonstrating Java threads and concurrent programming concepts.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_07_Threads" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEEK 8 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">08</div>
+                    <div class="week-title">
+                        <h2>Week 8: Miscellaneous Java Topics</h2>
+                        <p>Additional Java programming examples and course topics.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">☕</div>
+                        <h3>Miscellaneous Java Examples</h3>
+                        <p>Additional Java examples used for CSEN 160 lecture demonstrations.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_08_Miscellaneous" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEEK 9 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">09</div>
+                    <div class="week-title">
+                        <h2>Week 9: JDBC, JPA, and Web Applications</h2>
+                        <p>Database programming, persistence, Tomcat, and 3-tier applications.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">🗄️</div>
+                        <h3>JDBC</h3>
+                        <p>Java Database Connectivity examples and database programming.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_09_1_JDBC" target="_blank">View Repository</a>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-icon">🗄️</div>
+                        <h3>JPA</h3>
+                        <p>Java Persistence API examples for object-relational database persistence.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_09_2_JPA" target="_blank">View Repository</a>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-icon">🌐</div>
+                        <h3>3-Tier Web Application and Tomcat</h3>
+                        <p>Java web application examples using a 3-tier architecture and Apache Tomcat.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_09_3_WebAppTomcat" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEEK 10 -->
+            <section class="week-section">
+                <div class="week-header">
+                    <div class="week-number">10</div>
+                    <div class="week-title">
+                        <h2>Week 10: PostgreSQL, JPA, Spring Boot, and Microservices</h2>
+                        <p>Modern Java enterprise development and final projects.</p>
+                    </div>
+                </div>
+
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-icon">🚀</div>
+                        <h3>PostgreSQL, JPA, Spring Boot, and Microservices</h3>
+                        <p>Examples combining PostgreSQL, JPA, Spring Boot, and microservice architecture.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_10_PostgreSQL_JPA_SpringBoot_MicroServices_V1.0" target="_blank">View Repository</a>
+                    </div>
+
+                    <div class="repo-card">
+                        <div class="repo-icon">💻</div>
+                        <h3>CSEN 160 Projects</h3>
+                        <p>Programming projects and larger Java applications for CSEN 160.</p>
+                        <a class="repo-button" href="https://github.com/mikegrace2/CSEN160_10_Projects_V1.0" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <strong>CSEN 160 · Fall 2026</strong>
+            <p>Object-Oriented Analysis, Design, and Programming</p>
+            <p class="footer-small">Santa Clara University</p>
+        </div>
+    </footer>
+</body>
+</html>
