@@ -1,212 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>CSEN 160 | Fall 2026</title>
 
-    <!-- Figtree is an SCU-approved alternative to Avenir Next -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #a6192e, #7f1023);
+            color: white;
+            padding: 85px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 15px 0 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 700px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background: #f2b134;
+            color: #253746;
+            padding: 13px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .hero-button.secondary {
+            background: white;
+            color: #a6192e;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .hero-card h2 {
+            margin-top: 0;
+        }
+
+        .course-details {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        .course-details li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .course-details li:last-child {
+            border-bottom: none;
+        }
+
+        .main-content {
+            padding: 70px 0 90px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #253746;
+            margin-bottom: 10px;
+        }
+
+        .section-intro {
+            color: #687078;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 850px;
+            margin-bottom: 30px;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+            margin-bottom: 70px;
+        }
+
+        .quick-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid #a6192e;
+            transition: 0.2s;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .quick-icon {
+            font-size: 2.3rem;
+            margin-bottom: 12px;
+        }
+
+        .quick-card h2 {
+            margin: 0 0 10px;
+            color: #253746;
+        }
+
+        .quick-card p {
+            color: #687078;
+            line-height: 1.6;
+            min-height: 75px;
+        }
+
+        .quick-button {
+            display: inline-block;
+            background: #a6192e;
+            color: white;
+            padding: 11px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .quick-button:hover {
+            background: #7f1023;
+        }
+
+        .labs-section {
+            background: #f5f5f5;
+            padding: 60px 0;
+            margin-top: 20px;
+        }
+
+        .labs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .lab-topic {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #f2b134;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .lab-topic h3 {
+            margin: 0 0 8px;
+            color: #253746;
+        }
+
+        .lab-topic p {
+            margin: 0;
+            color: #687078;
+            line-height: 1.5;
+        }
+
+        .labs-button-container {
+            margin-top: 35px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .info-card h3 {
+            color: #a6192e;
+            margin-top: 0;
+        }
+
+        .info-card p {
+            color: #687078;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 800px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-button {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- TOP BAR -->
     <header class="top-header">
         <div class="container header-content">
             <div>
                 <div class="scu-name">SANTA CLARA UNIVERSITY</div>
-                <div class="school-name">School of Engineering</div>
+                <div class="school-name">
+                    CSEN 160 · Object-Oriented Analysis, Design, and Programming
+                </div>
             </div>
 
             <nav>
-                <a href="#home">Home</a>
-                <a href="#course">Course</a>
+                <a href="index.html">Home</a>
                 <a href="lectures.html">Lectures</a>
-                <a href="#resources">Resources</a>
+                <a href="labs.html">Labs & Code</a>
             </nav>
         </div>
     </header>
 
+    <section class="hero">
+        <div class="container hero-grid">
 
-    <!-- HERO -->
-    <main id="home">
-
-        <section class="hero">
-            <div class="container hero-content">
-
+            <div>
                 <div class="course-badge">FALL 2026</div>
 
-                <h1>
-                    CSEN 160
-                    <span>Object-Oriented Analysis, Design, and Programming</span>
-                </h1>
+                <h1>CSEN 160</h1>
 
-                <p class="hero-text">
-                    Learn the principles of object-oriented programming,
-                    software design, Java development, testing, and modern
-                    software engineering practices.
+                <h2>Object-Oriented Analysis, Design, and Programming</h2>
+
+                <p>
+                    Learn the principles and practices of modern object-oriented
+                    software development using Java. Explore object-oriented design,
+                    UML, Java collections, graphical user interfaces, file I/O,
+                    multithreading, databases, web applications, Spring Boot,
+                    microservices, and more.
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="lectures.html" class="button button-yellow">
-                        View Lectures
+                    <a class="hero-button" href="lectures.html">
+                        View Lecture Materials →
                     </a>
 
-                    <a href="#course" class="button button-outline">
-                        Course Information
+                    <a class="hero-button secondary" href="labs.html">
+                        Explore Labs & Code →
                     </a>
                 </div>
-
             </div>
-        </section>
 
+            <div class="hero-card">
+                <h2>Course Information</h2>
 
-        <!-- QUICK LINKS -->
-        <section class="quick-links">
-            <div class="container">
-
-                <div class="quick-grid">
-
-                    <a href="lectures.html" class="quick-card">
-                        <div class="card-icon">📚</div>
-                        <h2>Lectures</h2>
-                        <p>PowerPoints, lecture materials, and examples.</p>
-                    </a>
-
-                    <a href="#resources" class="quick-card">
-                        <div class="card-icon">💻</div>
-                        <h2>Resources</h2>
-                        <p>Development tools and useful course resources.</p>
-                    </a>
-
-                    <a href="#course" class="quick-card">
-                        <div class="card-icon">📋</div>
-                        <h2>Course Information</h2>
-                        <p>Schedule, instructor information, and policies.</p>
-                    </a>
-
-                </div>
-
+                <ul class="course-details">
+                    <li><strong>Course:</strong> CSEN 160</li>
+                    <li><strong>Term:</strong> Fall 2026</li>
+                    <li><strong>School:</strong> School of Engineering</li>
+                    <li><strong>University:</strong> Santa Clara University</li>
+                    <li><strong>Language:</strong> Java</li>
+                </ul>
             </div>
-        </section>
 
+        </div>
+    </section>
 
-        <!-- COURSE INFO -->
-        <section id="course" class="content-section">
-            <div class="container">
+    <main class="main-content">
 
-                <div class="section-title">
-                    <span>CSEN 160</span>
-                    <h2>Course Information</h2>
-                </div>
+        <div class="container">
 
-                <div class="info-grid">
+            <section>
+                <h2 class="section-title">Course Resources</h2>
 
-                    <div class="info-card">
-                        <h3>Instructor</h3>
-                        <p>Michael G. Schimpf</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>Quarter</h3>
-                        <p>Fall 2026</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>Course Materials</h3>
-                        <p>Available through the course lecture page.</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- LECTURES PREVIEW -->
-        <section class="lectures-preview">
-
-            <div class="container">
-
-                <div class="section-title light-title">
-                    <span>COURSE MATERIALS</span>
-                    <h2>Lecture Repository</h2>
-                </div>
-
-                <p class="section-description">
-                    Access all course lectures, PowerPoint presentations,
-                    source code, examples, and supporting materials.
+                <p class="section-intro">
+                    Access all CSEN 160 course materials, including lecture
+                    presentations, Java programming examples, laboratory code,
+                    demonstrations, and course projects.
                 </p>
 
-                <a href="lectures.html" class="button button-yellow">
-                    Browse All Lectures →
-                </a>
+                <div class="quick-links">
 
-            </div>
+                    <div class="quick-card">
+                        <div class="quick-icon">📊</div>
 
-        </section>
+                        <h2>Lecture Materials</h2>
 
+                        <p>
+                            Download PowerPoint presentations organized by week,
+                            covering all major topics in CSEN 160.
+                        </p>
 
-        <!-- RESOURCES -->
-        <section id="resources" class="content-section">
-            <div class="container">
+                        <a class="quick-button" href="lectures.html">
+                            View Lectures →
+                        </a>
+                    </div>
 
-                <div class="section-title">
-                    <span>TOOLS</span>
-                    <h2>Course Resources</h2>
+                    <div class="quick-card">
+                        <div class="quick-icon">💻</div>
+
+                        <h2>Labs & Code</h2>
+
+                        <p>
+                            Explore Java programming examples, lecture demonstrations,
+                            database applications, web applications, and projects.
+                        </p>
+
+                        <a class="quick-button" href="labs.html">
+                            Explore Labs & Code →
+                        </a>
+                    </div>
+
+                    <div class="quick-card">
+                        <div class="quick-icon">☕</div>
+
+                        <h2>Java Programming</h2>
+
+                        <p>
+                            Practice modern Java programming techniques through
+                            examples covering object-oriented design, collections,
+                            threads, persistence, and enterprise development.
+                        </p>
+
+                        <a class="quick-button" href="labs.html">
+                            View Java Examples →
+                        </a>
+                    </div>
+
                 </div>
+            </section>
 
-                <div class="resources-grid">
-
-                    <div class="resource-card">
-                        <h3>☕ Java</h3>
-                        <p>Java development environment and programming resources.</p>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>🧠 IntelliJ IDEA</h3>
-                        <p>Recommended integrated development environment.</p>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>🐙 GitHub</h3>
-                        <p>Course repositories, assignments, and source code.</p>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>🧪 JUnit</h3>
-                        <p>Unit testing and software quality resources.</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
+        </div>
 
     </main>
 
+    <section class="labs-section">
 
-    <!-- FOOTER -->
-    <footer>
         <div class="container">
 
-            <strong>CSEN 160</strong>
+            <h2 class="section-title">Labs & Programming Examples</h2>
 
-            <p>
-                Object-Oriented Analysis, Design, and Programming
+            <p class="section-intro">
+                The CSEN 160 Labs & Code section connects directly to the public
+                GitHub repositories used for lecture demonstrations and programming
+                examples. Code is organized by the topics covered throughout the course.
             </p>
 
-            <p class="footer-small">
-                Santa Clara University · Fall 2026
-            </p>
+            <div class="labs-grid">
 
+                <div class="lab-topic">
+                    <h3>Week 1</h3>
+                    <p>Java refresher and core programming concepts.</p>
+                </div>
+
+                <div class="lab-topic">
+                    <h3>Week 2</h3>
+                    <p>Object-oriented programming, classes, and objects.</p>
+                </div>
+
+                <div class="lab-topic">
+                    <h3>Week 3</h3>
+                    <p>AWT, Swing, events, and graphics programming.</p>
+                </div>
+
+                <div class="lab-topic">
+                    <h3>Week 4</h3>
+                    <p>Advanced Java concepts and exception handling.</p>
+                </div>
+
+                <div class="lab-topic">
+                    <h3>Week 5</h3>
+                    <p>Data structures, collections, and generics.</p>
+                </div>
+
+                <div class="lab-topic">
+                    <h3>Week 6</h3>
+                    <p>File I/O, advanced file processing, and serialization.</p>
+                </div>
+
+                <div class="lab-topic">
+                    <h3>Week 7</h3>
+                    <p>Threads, concurrency, and multithreaded programming.</p>
+                </div>
+
+                <div class="lab-topic">
+                    <h3>Week 8</h3>
+                    <p>Additional Java topics, testing, and miscellaneous examples.</p>
+                </div>
+
+                <div class="lab-topic">
+                    <h3>Week 9</h3>
+                    <p>JDBC, JPA, Tomcat, and 3-tier web applications.</p>
+                </div>
+
+                <div class="lab-topic">
+                    <h3>Week 10</h3>
+                    <p>PostgreSQL, Spring Boot, microservices, and projects.</p>
+                </div>
+
+            </div>
+
+            <div class="labs-button-container">
+                <a class="quick-button" href="labs.html">
+                    Open All Labs & Code Repositories →
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="main-content">
+
+        <div class="container">
+
+            <h2 class="section-title">What You Will Learn</h2>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <h3>Object-Oriented Design</h3>
+
+                    <p>
+                        Design software using classes, objects, inheritance,
+                        polymorphism, encapsulation, abstraction, and UML.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Modern Java</h3>
+
+                    <p>
+                        Work with generics, collections, exceptions, file I/O,
+                        serialization, threads, lambda expressions, and other
+                        modern Java programming concepts.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Software Development</h3>
+
+                    <p>
+                        Develop larger applications using databases, JDBC, JPA,
+                        web application architectures, Spring Boot, and
+                        microservices.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <strong>CSEN 160 · Fall 2026</strong>
+            <p>Object-Oriented Analysis, Design, and Programming</p>
+            <p class="footer-small">Santa Clara University</p>
         </div>
     </footer>
 
